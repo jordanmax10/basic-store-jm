@@ -1,0 +1,87 @@
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div
+    class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4"
+  >
+    <a
+    [routerLink]="['']"
+      class="flex items-center space-x-3 rtl:space-x-reverse"
+    >
+      <img
+        src="img/e-commerce.png"
+        class="h-8"
+        alt="Flowbite Logo"
+      />
+      <span
+        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+        >Store JM</span
+      >
+    </a>
+    <div class="flex items-center space-x-6 rtl:space-x-reverse">
+      <a
+        href="#"
+        class="text-sm text-gray-500 dark:text-white hover:underline"
+        >0987456123</a
+      >
+      <a
+        href="#"
+        class="text-sm text-blue-600 dark:text-blue-500 hover:underline"
+        >Login</a
+      >
+    </div>
+  </div>
+</nav>
+
+<nav class="bg-gray-50 dark:bg-gray-700 mb-8">
+  <div
+    class="max-w-screen-xl px-4 py-3 mx-auto flex justify-between items-center"
+  >
+    <ul
+      class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm"
+    >
+      <li>
+        <a
+          [routerLink]="['']"
+          [routerLinkActive]="['dark:text-green-600']"
+          [routerLinkActiveOptions]="{ exact: true }"
+          style="cursor: pointer"
+          class="text-gray-900 dark:text-white hover:underline"
+          aria-current="page"
+          >Productos</a
+        >
+      </li>
+      <li>
+        <a
+          [routerLink]="['/carrito']"
+          [routerLinkActive]="['dark:text-green-600']"
+          [routerLinkActiveOptions]="{ exact: true }"
+          style="cursor: pointer"
+          class="text-gray-900 dark:text-white hover:underline"
+          >Carrito</a
+        >
+      </li>
+    </ul>
+
+    <button class="relative flex items-center ml-auto">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="icon icon-tabler icons-tabler-filled icon-tabler-shopping-cart"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z"
+        />
+      </svg>
+
+      @if (cartState.count() >0) {
+      <span
+        class="absolute top-0 right-5 inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-green-600 border-2 border-white rounded-full"
+        >{{cartState.count()}}</span
+      >
+    }
+    </button>
+  </div>
+</nav>
