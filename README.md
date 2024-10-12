@@ -67,6 +67,3 @@ Algunas de las características y beneficios que puede ofrecer incluyen:
     npm install ngx-pagination --save
 
 
-## ng add angular-cli-ghpages
-
-    ng deploy --base-href=https://jordanmax10.github.io/basic-store-jm/
